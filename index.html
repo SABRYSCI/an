@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إجابات أنشطة العلوم | الصف الثاني الإعدادي</title>
+    <!-- مكتبات التصميم والتنبيهات -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen p-4 md:p-8">
+    
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 mt-4">
+        <!-- ترويسة الصفحة -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">إجابات أنشطة العلوم</h1>
+            <h2 class="text-xl text-slate-600 mb-4">الصف الثاني الإعدادي</h2>
+            <p class="text-slate-500 text-sm">اضغط على رقم الصفحة لعرض الإجابة النموذجية للنشاط</p>
+        </div>
+        
+        <!-- حاوية أزرار الأنشطة -->
+        <div id="activities-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div id="loading" class="col-span-full text-center text-blue-600 font-bold py-10 animate-pulse">
+                جاري جلب الأنشطة، يرجى الانتظار...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sheetId = '1gF3XRXjtG_BgHJaI7ZrR2O7Qrww1f4dicChwWYplZww';
+        const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
+
+        async function fetchActivities() {
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                const jsonString = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
+                const data = JSON.parse(jsonString);
+                
+                const container = document.getElementById('activities-container');
+                document.getElementById('loading').remove();
+
+                const rows = data.table.rows;
+
+                rows.forEach(row => {
+                    if (row.c[0] && row.c[1] && row.c[2]) {
+                        const pageNum = row.c[0].v;
+                        const fileLink = row.c[1].v;
+                        const status = row.c[2].v;
+
+                        const activityBtn = document.createElement('a');
+                        
+                        if (status.trim() === 'إظهار') {
+                            // تصميم الزر المفتوح
+                            activityBtn.href = fileLink;
+                            activityBtn.target = "_blank";
+                            activityBtn.className = "flex flex-col items-center justify-center bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200 font-bold py-4 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1";
+                            activityBtn.innerHTML = `
+                                <span class="text-sm font-normal mb-1">صفحة</span>
+                                <span class="text-2xl">${pageNum}</span>
+                            `;
+                        } else {
+                            // تصميم الزر المغلق ورسالة التنبيه المخصصة
+                            activityBtn.href = "#";
+                            activityBtn.className = "flex flex-col items-center justify-center bg-slate-100 text-slate-400 border border-slate-200 font-bold py-4 rounded-xl cursor-pointer opacity-75 hover:bg-slate-200 transition-colors";
+                            activityBtn.innerHTML = `
+                                <span class="text-sm font-normal mb-1">صفحة</span>
+                                <span class="text-2xl mb-1">${pageNum}</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                                </svg>
+                            `;
+                            activityBtn.onclick = (e) => {
+                                e.preventDefault();
+                                Swal.fire({
+                                    icon: 'info',
+                                    title: 'النشاط مغلق مؤقتاً',
+                                    text: 'عزيزي الطالب، إجابة هذا النشاط غير متاحة الآن. سأقوم بفتحها لك فور انتهائنا من شرح الدرس المرتبط بها. دعنا نركز في الشرح لنتمكن من الحل معاً!',
+                                    confirmButtonText: 'حسناً، فهمت',
+                                    confirmButtonColor: '#3b82f6',
+                                    backdrop: `rgba(0,0,123,0.4)`
+                                });
+                            };
+                        }
+
+                        container.appendChild(activityBtn);
+                    }
+                });
+            } catch (error) {
+                console.error("Error loading data:", error);
+                document.getElementById('activities-container').innerHTML = `
+                    <div class="col-span-full text-center text-red-500 font-bold py-10">
+                        عذراً، حدث خطأ في تحميل الأنشطة. تأكد من اتصالك بالإنترنت.
+                    </div>
+                `;
+            }
+        }
+
+        window.onload = fetchActivities;
+    </script>
+</body>
+</html>
