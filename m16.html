@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مراجعة قبل الوقفة التقويمية الأولى - علوم الصف السادس الابتدائي</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>(function(){var t;try{t=localStorage.getItem('th')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.dataset.theme=t})()</script>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg:#eaf5fb;--glow:#c8f5d8;--card:#fff;--ink:#0e2b3f;--mut:#58738a;--line:#d6e4ee;--pri:#0a7cb0;--pri2:#e1f3fb;--ok:#14915a;--okb:#e2f6eb;--no:#d23b3b;--nob:#fde9e9;--wn:#c98a06;--wnb:#fff3d1;--hl:#7c3aed;--onhl:#fff;--c0:#0284c7;--c1:#10b981;--c2:#f59e0b;--c3:#8b5cf6;--c4:#ec4899;--sh:0 12px 32px -14px rgba(10,90,130,.35);color-scheme:light}
+[data-theme=dark]{--bg:#08131c;--glow:#0e4a5b;--card:#112230;--ink:#e8f3fa;--mut:#8fa8b9;--line:#223b4c;--pri:#55c6f2;--pri2:#123446;--ok:#43dd9a;--okb:#0e3426;--no:#ff7b7b;--nob:#3b1b20;--wn:#ffc857;--wnb:#3a2f10;--hl:#a78bfa;--onhl:#1b1200;--c0:#38bdf8;--c1:#34d399;--c2:#fbbf24;--c3:#a78bfa;--c4:#f472b6;--sh:0 12px 32px -14px #000;color-scheme:dark}
+body{margin:0;font:16px/1.7 Cairo,system-ui,sans-serif;color:var(--ink);background:radial-gradient(800px 380px at 90% -80px,var(--glow),transparent 70%),var(--bg) fixed;min-height:100vh;transition:color .4s}
+.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 82%,transparent);padding:calc(8px + env(safe-area-inset-top)) 16px 0;border-bottom:1px solid var(--line)}
+.bar>div{max-width:840px;margin:auto;display:flex;align-items:center;gap:12px}
+.bar b{font-size:15px;flex:1}.cnt{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums;font-weight:700}
+#th{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:19px;cursor:pointer;transition:transform .4s}
+#th:active{transform:rotate(60deg) scale(.88)}
+.pg{height:4px;margin:8px -16px 0;background:var(--line)}.pg i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pri),var(--ok));transition:width .45s cubic-bezier(.3,1.3,.5,1)}
+main{max-width:840px;margin:auto;padding:16px 16px 40px}
+.ministry{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:700;color:var(--mut);margin-bottom:10px;padding:0 6px;flex-wrap:wrap;gap:8px}
+.ministry .en{direction:ltr;text-align:left}
+.hero{position:relative;overflow:hidden;border-radius:24px;padding:26px 22px;background:linear-gradient(135deg,#0a7cb0,#0d6e6e 60%,#14915a);color:#fff;box-shadow:var(--sh)}
+.hero h1{margin:0 0 4px;font-size:clamp(21px,4.8vw,29px);line-height:1.4;font-weight:800}.hero p{margin:3px 0;opacity:.94;font-size:15px}
+.tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}.tags span{color:#fff;background:#ffffff24;border:1px solid #ffffff40;padding:4px 12px;border-radius:99px;font-size:12.5px;font-weight:700}
+.bb{position:absolute;bottom:-30px;border-radius:50%;border:2px solid #ffffff55;background:#ffffff14;animation:fl 7s ease-in infinite}
+@keyframes fl{from{transform:translateY(0);opacity:0}25%{opacity:1}to{transform:translateY(-220px);opacity:0}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin:16px 0;box-shadow:var(--sh);transition:opacity .5s,transform .5s,background .4s,border-color .4s}
+.card.rv{opacity:0;transform:translateY(16px)}.card.rv.in{opacity:1;transform:none}
+.info{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.info label{font-weight:700;font-size:14px;color:var(--pri);display:block;margin-bottom:4px}
+.info input,.info select{width:100%;font:inherit;font-size:16px;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);transition:border .2s,box-shadow .2s}
+.info input:focus,.info select:focus{outline:0;border-color:var(--pri);box-shadow:0 0 0 4px color-mix(in srgb,var(--pri) 22%,transparent)}
+.err{animation:sk .4s;border-color:var(--no)!important}
+.card header{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;flex-wrap:wrap}
+.no{flex:none;width:34px;height:34px;border-radius:10px;background:var(--pri);color:var(--card);display:grid;place-items:center;font-size:15px}
+h3{margin:0;font-size:16.5px;line-height:1.7;flex:1;min-width:200px}
+.badges{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.pt{font-size:12px;font-weight:700;color:var(--pri);background:var(--pri2);padding:2px 10px;border-radius:99px;white-space:nowrap}
+.sk-tag{font-size:11.5px;font-weight:700;color:#fff;background:#0284c7;padding:2px 10px;border-radius:99px;white-space:nowrap}
+.sk-tag.timss{background:#7c3aed}.sk-tag.green{background:#15803d}
+.lead{margin:0 0 10px;font-weight:600;font-size:15px;color:var(--mut)}
+.sub{padding:12px 0 6px;border-top:1px dashed var(--line);border-radius:12px}
+.lb{font-weight:700;margin-bottom:8px;font-size:15.5px}.lb em{font-style:normal;font-weight:700;background:var(--pri2);color:var(--pri);padding:1px 10px;border-radius:8px;margin-inline-start:6px;display:inline-block;font-size:13.5px}
+.opts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}.opts.long{grid-template-columns:1fr}
+.opt{display:flex;align-items:center;gap:10px;min-height:50px;padding:10px 14px;text-align:start;font:inherit;font-size:15px;line-height:1.5;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:14px;cursor:pointer;transition:transform .15s,border-color .2s,background .2s,box-shadow .2s}
+.opt:active{transform:scale(.97)}.opts:not(.done) .opt:hover{border-color:var(--pri)}.opt:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+.rd{flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--mut);transition:.2s}
+.opt.sel{border-color:var(--pri);background:var(--pri2);box-shadow:0 6px 16px -8px var(--pri)}.opt.sel .rd{border:6px solid var(--pri);animation:pop .3s}
+@keyframes pop{50%{transform:scale(1.4)}}
+.done .opt{cursor:default;opacity:.6}.done .opt.ok,.done .opt.bad{opacity:1}
+.opt.ok{border-color:var(--ok);background:var(--okb)}.opt.ok .rd{border:6px solid var(--ok)}
+.opt.bad{border-color:var(--no);background:var(--nob);animation:sk .4s}.opt.bad .rd{border:6px solid var(--no)}
+.opt.ok::after,.opt.bad::after{content:'✓';margin-inline-start:auto;font-weight:700;color:var(--ok)}.opt.bad::after{content:'✗';color:var(--no)}
+@keyframes sk{25%{transform:translateX(6px)}75%{transform:translateX(-6px)}}
+.sub.miss{animation:ms 1.4s}@keyframes ms{0%,60%{background:var(--wnb)}}
+.fb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}.fb.on{grid-template-rows:1fr}.fb>div{overflow:hidden}
+.fb p{margin:10px 0 4px;padding:10px 14px;border-radius:12px;font-size:14px}
+.fb .g{background:var(--okb);border-inline-start:4px solid var(--ok)}.fb .r{background:var(--nob);border-inline-start:4px solid var(--no)}
+.vis-box{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px;margin:8px 0 12px}
+.lvl-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;text-align:center}
+.lvl-item{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px 8px}
+.lvl-item svg{width:54px;height:54px;display:block;margin:0 auto 4px}
+.lvl-item b{font-size:13.5px;color:var(--pri);display:block}
+.lvl-item span{font-size:12px;color:var(--mut)}
+.carrots{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.beaker{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.beaker svg{width:110px;height:110px;display:block;margin:auto}
+.bars{display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:115px 1fr 48px;align-items:center;gap:8px;font-size:14px;font-weight:700}
+.bar-track{height:16px;background:var(--card);border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.bar-fill{height:100%;border-radius:99px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.btn{width:100%;min-height:56px;font:700 18px Cairo,sans-serif;border:0;border-radius:16px;cursor:pointer;color:#fff;background:linear-gradient(135deg,#0a7cb0,#14915a);box-shadow:var(--sh);transition:transform .15s,filter .2s}
+.btn:active{transform:scale(.98)}.btn:hover{filter:brightness(1.08)}.btn.rt{background:linear-gradient(135deg,#d98a06,#d9480f);margin-top:14px}
+#res{display:none;text-align:center}#res.show{display:block;animation:up .6s both}@keyframes up{from{opacity:0;transform:translateY(20px)}}
+.rw{position:relative;width:145px;margin:auto}.ring{width:145px;display:block;transform:rotate(-90deg)}.ring circle{fill:none;stroke-width:9;stroke-linecap:round}.rb{stroke:var(--line)}
+.rf{stroke:var(--c);stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1)}
+.rn{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;font-weight:800}
+#res h2{margin:10px 0 0}#res p{margin:4px 0}.st{font-size:14px;color:var(--mut)}
+.ts{position:fixed;inset-inline:16px;bottom:calc(20px + env(safe-area-inset-bottom));max-width:420px;margin:auto;background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:14px;font-weight:600;text-align:center;transform:translateY(160%);transition:transform .4s cubic-bezier(.3,1.4,.5,1);z-index:30}.ts.on{transform:none}
+.foot{text-align:center;font-size:13.5px;color:var(--mut);margin-top:24px;font-weight:700}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div>
+    <b>مراجعة العلوم · السادس الابتدائي</b>
+    <span class="cnt" id="cnt">0 / 0</span>
+    <button id="th" type="button" aria-label="تبديل الوضع الفاتح والداكن"></button>
+  </div>
+  <div class="pg"><i id="pg"></i></div>
+</div>
+
+<main>
+  <div class="ministry">
+    <div>مملكة البحرين · وزارة التربية والتعليم · مدرسة البلاد القديم الابتدائية الإعدادية للبنين</div>
+    <div class="en">KINGDOM OF BAHRAIN · Ministry of Education</div>
+  </div>
+
+  <div class="hero">
+    <span class="bb" style="left:10%;width:22px;height:22px"></span>
+    <span class="bb" style="left:28%;width:14px;height:14px;animation-delay:2s"></span>
+    <span class="bb" style="left:55%;width:26px;height:26px;animation-delay:4s"></span>
+    <span class="bb" style="left:80%;width:16px;height:16px;animation-delay:1s"></span>
+    <h1>مراجعة قبل الوقفة التقويمية الأولى - علوم السادس الابتدائي</h1>
+    <p>الفصل الدراسي الأول 2026-2027 · الدرجة الكلية: 37 درجة</p>
+    <p>إعداد: أ. صبري محمد حمد السيد إبراهيم</p>
+    <div class="tags">
+      <span>🧬 الخلايا وأنشطتها</span>
+      <span>🌍 أسئلة TIMSS الدولية</span>
+      <span>🌱 التعليم الأخضر</span>
+    </div>
+  </div>
+
+  <form id="f" novalidate>
+    <div class="card info">
+      <div>
+        <label for="nm">اسم الطالب الثلاثي</label>
+        <input id="nm" autocomplete="name" placeholder="اكتب اسمك الثلاثي هنا...">
+      </div>
+      <div>
+        <label for="cl">الصف</label>
+        <select id="cl">
+          <option value="">-- اختر الصف --</option>
+          <option value="6 / 1">6 / 1</option>
+          <option value="6 / 2">6 / 2</option>
+          <option value="6 / 3">6 / 3</option>
+          <option value="6 / 4">6 / 4</option>
+          <option value="6 / 5">6 / 5</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="qs"></div>
+    <button class="btn" id="sb" type="submit">إرسال الإجابات وعرض النتيجة (من 37)</button>
+  </form>
+
+  <section class="card" id="res"></section>
+  <div class="foot">مع تمنيات قسم العلوم بدوام التفوق والنجاح · إعداد: أ. صبري محمد حمد السيد إبراهيم</div>
+</main>
+
+<div class="ts" id="ts"></div>
+
+<script>
+const GOOGLE_SCRIPT_URL="https://script.google.com/macros/s/AKfycby3SHivQI1a4sefbTrbzhBKmPjikMIvnZjOwLKIOLuLLvIHEclUW3AEVUDbAHfjtSQ9Tw/exec";
+const MAX_SCORE=37;
+const $=id=>document.getElementById(id);
+
+const T_TERMS=['النسيج','دورة الخلية','الخاصية الأسموزية','النقل النشط','الجدار الخلوي'];
+const T_LEVELS=['خلية','نسيج','عضو','جهاز'];
+const T_PRES=['موجود (✔)','غير موجود (✘)'];
+const T_TF=['صحيحة (✔)','غير صحيحة (✘)'];
+
+/* الرسوم التوضيحية التفاعلية (SVG) */
+const VIS_LEVELS=`<div class="vis-box"><div class="lvl-flow">
+  <div class="lvl-item"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="#38bdf822" stroke="#0284c7" stroke-width="3"/><circle cx="32" cy="32" r="8" fill="#0284c7"/></svg><b>الشكل (1)</b><span>وحدة بنائية مفردة</span></div>
+  <div class="lvl-item"><svg viewBox="0 0 64 64"><g fill="#10b98122" stroke="#059669" stroke-width="2.5"><rect x="8" y="14" width="22" height="16" rx="4"/><rect x="34" y="14" width="22" height="16" rx="4"/><rect x="8" y="34" width="22" height="16" rx="4"/><rect x="34" y="34" width="22" height="16" rx="4"/></g><g fill="#059669"><circle cx="19" cy="22" r="3"/><circle cx="45" cy="22" r="3"/><circle cx="19" cy="42" r="3"/><circle cx="45" cy="42" r="3"/></g></svg><b>الشكل (2)</b><span>خلايا متشابهة مجتمعة</span></div>
+  <div class="lvl-item"><svg viewBox="0 0 64 64"><path d="M26 12 C18 20,14 36,24 48 C34 56,48 46,46 32 C44 22,36 22,34 12 Z" fill="#f59e0b22" stroke="#d97706" stroke-width="3"/></svg><b>الشكل (3)</b><span>المعدة</span></div>
+  <div class="lvl-item"><svg viewBox="0 0 64 64"><rect x="18" y="8" width="28" height="48" rx="12" fill="#8b5cf622" stroke="#7c3aed" stroke-width="3"/><path d="M32 14 v14 M24 28 h16 v16 h-16 z" fill="none" stroke="#7c3aed" stroke-width="2.5"/></svg><b>الشكل (4)</b><span>الجهاز الهضمي كاملاً</span></div>
+</div></div>`;
+
+const VIS_CARROTS=`<div class="vis-box"><div class="carrots">
+  <div class="beaker">
+    <svg viewBox="0 0 120 120">
+      <path d="M20 20 v80 a10 10 0 0 0 10 10 h60 a10 10 0 0 0 10 -10 v-80" fill="none" stroke="#0284c7" stroke-width="3"/>
+      <path d="M22 45 h76 v54 a8 8 0 0 1 -8 8 h-60 a8 8 0 0 1 -8 -8 z" fill="#38bdf833"/>
+      <path d="M52 28 h16 l-4 65 a4 4 0 0 1 -8 0 z" fill="#ea580c" stroke="#9a3412" stroke-width="2"/>
+      <path d="M55 28 l-5 -12 M60 28 v-14 M65 28 l5 -12" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <b style="color:var(--ok)">كأس ماء عذب</b>
+    <div style="font-size:13px;color:var(--mut)">أصبحت الجزرة أكثر صلابة (دخول الماء)</div>
+  </div>
+  <div class="beaker">
+    <svg viewBox="0 0 120 120">
+      <path d="M20 20 v80 a10 10 0 0 0 10 10 h60 a10 10 0 0 0 10 -10 v-80" fill="none" stroke="#0284c7" stroke-width="3"/>
+      <path d="M22 45 h76 v54 a8 8 0 0 1 -8 8 h-60 a8 8 0 0 1 -8 -8 z" fill="#fde04744"/>
+      <path d="M55 32 q10 25 -2 58 q-6 -25 2 -58" fill="#c2410c" stroke="#7c2d12" stroke-width="2"/>
+      <path d="M55 32 l-6 -8 M60 32 l4 -9" stroke="#65a30d" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <b style="color:var(--no)">كأس ماء شديد الملوحة</b>
+    <div style="font-size:13px;color:var(--mut)">أصبحت الجزرة ذابلة ومنكمشة (خروج الماء)</div>
+  </div>
+</div></div>`;
+
+const VIS_BARS=`<div class="vis-box" id="cellChart"><div class="bars">
+  <div class="bar-row"><span>الماء</span><div class="bar-track"><div class="bar-fill" data-w="70%" style="background:var(--c0)"></div></div><b>70%</b></div>
+  <div class="bar-row"><span>البروتينات</span><div class="bar-track"><div class="bar-fill" data-w="15%" style="background:var(--c1)"></div></div><b>15%</b></div>
+  <div class="bar-row"><span>الدهون</span><div class="bar-track"><div class="bar-fill" data-w="10%" style="background:var(--c2)"></div></div><b>10%</b></div>
+  <div class="bar-row"><span>الأحماض النووية</span><div class="bar-track"><div class="bar-fill" data-w="4%" style="background:var(--c3)"></div></div><b>4%</b></div>
+  <div class="bar-row"><span>الكربوهيدرات</span><div class="bar-track"><div class="bar-fill" data-w="1%" style="background:var(--c4)"></div></div><b>1%</b></div>
+</div></div>`;
+
+/* بنية الأسئلة: [النص، الإجابة الصحيحة، الخيارات، التغذية الراجعة، وزن الدرجة] */
+const Q=[
+{t:'السؤال الأول: اختر الإجابة الصحيحة:',p:5,sk:'فهم',s:[
+['1- العالم الذي شاهد خلايا الفلين وأطلق عليها اسم «الخلية» هو:','روبرت هوك',['روبرت براون','روبرت هوك','شلايدن','ثيودور شفان'],'روبرت هوك هو أول من شاهد خلايا الفلين بالمجهر وأطلق عليها اسم الخلية.',1],
+['2- أي التراكيب الآتية يُعد مركز إنتاج الطاقة في الخلية؟','الميتوكندريا',['الميتوكندريا','الفجوة العصارية','الجدار الخلوي','البلاستيدات الخضراء'],'الميتوكندريا هي مصدر إنتاج الطاقة في الخلية.',1],
+['3- انتقال المواد من منطقة التركيز المرتفع إلى منطقة التركيز المنخفض دون حاجة إلى طاقة يسمى:','الانتشار',['النقل النشط','الانتشار','الانقسام المتساوي','دورة الخلية'],'الانتشار هو نقل سلبي للمواد من التركيز المرتفع إلى المنخفض دون طاقة.',1],
+['4- الوحدة الأساسية في بناء أجسام جميع المخلوقات الحية هي:','الخلية',['النسيج','الخلية','العضو','الجهاز'],'الخلية هي الوحدة الأساسية للبناء والوظيفة في جميع المخلوقات الحية.',1],
+['5- التركيب الذي يتحكم في أنشطة الخلية ويحتوي على المادة الوراثية هو:','النواة',['النواة','الغشاء الخلوي','الفجوة العصارية','الجدار الخلوي'],'النواة تتحكم في جميع أنشطة الخلية وتحتوي على المادة الوراثية.',1]
+]},
+{t:'السؤال الثاني: اختر المصطلح العلمي المناسب لكل عبارة مما يأتي:',p:5,sk:'تذكر',s:[
+['1- مجموعة من الخلايا المتشابهة تعمل معاً وتؤدي الوظيفة نفسها.','النسيج',T_TERMS,'النسيج يتكون من خلايا متشابهة تؤدي الوظيفة نفسها.',1],
+['2- عملية مستمرة من نمو الخلايا وانقسامها وتعويض الخلايا التالفة.','دورة الخلية',T_TERMS,'دورة الخلية هي العملية المستمرة لنمو الخلايا وانقسامها وتعويض التالف منها.',1],
+['3- انتقال جزيئات الماء عبر الغشاء الخلوي من الوسط الأعلى تركيزاً بالماء إلى الوسط الأقل تركيزاً به.','الخاصية الأسموزية',T_TERMS,'انتقال جزيئات الماء عبر الغشاء الخلوي يسمى الخاصية الأسموزية.',1],
+['4- انتقال المواد عبر الغشاء الخلوي من منطقة التركيز المنخفض إلى المرتفع باستخدام طاقة.','النقل النشط',T_TERMS,'النقل النشط يحتاج إلى طاقة لنقل المواد من التركيز المنخفض إلى المرتفع.',1],
+['5- تركيب يحيط بالخلية النباتية ويعطيها الشكل والدعم.','الجدار الخلوي',T_TERMS,'الجدار الخلوي يحيط بالخلية النباتية ويوفر لها الشكل والدعم.',1]
+]},
+{t:'السؤال الثالث: يعبر الشكل التالي عن مستويات التنظيم في جسم الإنسان:',p:4,sk:'فهم وتحليل',i:VIS_LEVELS,s:[
+['1- (أ) صنف المستوى الأول <em>الشكل (1): وحدة مفردة</em>','خلية',T_LEVELS,'أصغر مستوى تنظيمي هو الخلية.',0.25],
+['1- (ب) صنف المستوى الثاني <em>الشكل (2): خلايا متشابهة</em>','نسيج',T_LEVELS,'تجمع الخلايا المتشابهة يكوّن نسيجاً.',0.25],
+['1- (ج) صنف المستوى الثالث <em>الشكل (3): المعدة</em>','عضو',T_LEVELS,'المعدة تمثل عضواً يتكون من عدة أنسجة.',0.25],
+['1- (د) صنف المستوى الرابع <em>الشكل (4): الجهاز الهضمي</em>','جهاز',T_LEVELS,'الجهاز الهضمي يمثل مستوى الجهاز.',0.25],
+['2- أي مستويات التنظيم في الشكل أكثر تعقيداً؟','الجهاز (الجهاز الهضمي)؛ لأنه يتكون من مجموعة أعضاء تعمل معاً لأداء وظيفة محددة',['الجهاز (الجهاز الهضمي)؛ لأنه يتكون من مجموعة أعضاء تعمل معاً لأداء وظيفة محددة','الخلية؛ لأنها أصغر وحدة في المخلوق الحي','النسيج؛ لأنه يتكون من خلايا متشابهة فقط'],'الجهاز هو المستوى الأكثر تعقيداً لتكونه من مجموعة أعضاء تتآزر معاً.',1],
+['3- ما أصغر وحدة بنائية في جسم المخلوق الحي؟','الخلية',T_LEVELS,'الخلية هي أصغر وحدة بنائية في جسم المخلوق الحي.',1],
+['4- أي مستويات التنظيم يتكون من نسيجين مختلفين أو أكثر يعملان معاً؟','عضو',T_LEVELS,'العضو يتكون من نسيجين مختلفين أو أكثر يعملان معاً.',1]
+]},
+{t:'السؤال الرابع: قارن بين الخلية الحيوانية والخلية النباتية بتحديد وجود كل مكون أو عدم وجوده:',p:7,sk:'فهم وتطبيق',i:'<p class="lead">اختر (موجود ✔) أو (غير موجود ✘) لكل مكون في كلتا الخليتين (نصف درجة لكل فقرة):</p>',s:[
+['1- جدار الخلية في <em>الخلية الحيوانية</em>','غير موجود (✘)',T_PRES,'الخلية الحيوانية لا تحتوي على جدار خلوي.',0.5],
+['2- جدار الخلية في <em>الخلية النباتية</em>','موجود (✔)',T_PRES,'الخلية النباتية يحيط بها جدار خلوي.',0.5],
+['3- البلاستيدات الخضراء في <em>الخلية الحيوانية</em>','غير موجود (✘)',T_PRES,'الخلية الحيوانية لا تصنع غذاءها ولا تحتوي بلاستيدات خضراء.',0.5],
+['4- البلاستيدات الخضراء في <em>الخلية النباتية</em>','موجود (✔)',T_PRES,'الخلية النباتية تحتوي بلاستيدات خضراء للقيام بالبناء الضوئي.',0.5],
+['5- الفجوة العصارية في <em>الخلية الحيوانية</em>','موجود (✔)',T_PRES,'الفجوة العصارية موجودة في الخلية الحيوانية (تكون صغيرة).',0.5],
+['6- الفجوة العصارية في <em>الخلية النباتية</em>','موجود (✔)',T_PRES,'الفجوة العصارية موجودة في الخلية النباتية (تكون كبيرة الحجم).',0.5],
+['7- الغشاء الخلوي في <em>الخلية الحيوانية</em>','موجود (✔)',T_PRES,'الغشاء الخلوي موجود في جميع الخلايا.',0.5],
+['8- الغشاء الخلوي في <em>الخلية النباتية</em>','موجود (✔)',T_PRES,'الغشاء الخلوي موجود في جميع الخلايا.',0.5],
+['9- النواة في <em>الخلية الحيوانية</em>','موجود (✔)',T_PRES,'النواة موجودة في الخلية الحيوانية.',0.5],
+['10- النواة في <em>الخلية النباتية</em>','موجود (✔)',T_PRES,'النواة موجودة في الخلية النباتية.',0.5],
+['11- السيتوبلازم في <em>الخلية الحيوانية</em>','موجود (✔)',T_PRES,'السيتوبلازم يملأ الخلية الحيوانية.',0.5],
+['12- السيتوبلازم في <em>الخلية النباتية</em>','موجود (✔)',T_PRES,'السيتوبلازم يملأ الخلية النباتية.',0.5],
+['13- الميتوكندريا في <em>الخلية الحيوانية</em>','موجود (✔)',T_PRES,'الميتوكندريا موجودة لإنتاج الطاقة في الخلية الحيوانية.',0.5],
+['14- الميتوكندريا في <em>الخلية النباتية</em>','موجود (✔)',T_PRES,'الميتوكندريا موجودة لإنتاج الطاقة في الخلية النباتية.',0.5]
+]},
+{t:'السؤال الخامس: وضع طالب جزرة في كأس ماء عذب، وجزرة أخرى في كأس ماء شديد الملوحة لعدة ساعات:',p:4,sk:'تحليل - TIMSS',sc:'timss',i:VIS_CARROTS,s:[
+['1- ما اسم العملية التي انتقل بها الماء عبر أغشية خلايا الجزر؟','الخاصية الأسموزية',['الخاصية الأسموزية','النقل النشط','الانقسام المتساوي'],'انتقال الماء عبر الأغشية يتم بالخاصية الأسموزية.',1],
+['2- أي الجزرتين فقدت الماء من خلاياها؟','الجزرة الموضوعة في الماء شديد الملوحة',['الجزرة الموضوعة في الماء شديد الملوحة','الجزرة الموضوعة في الماء العذب','كلتا الجزرتين اكتسبتا الماء'],'الجزرة الموضوعة في الماء شديد الملوحة هي التي فقدت الماء فانكمشت.',1],
+['3- فسر علمياً سبب ذبول الجزرة الموجودة في الماء شديد الملوحة:','خرج الماء من خلايا الجزرة إلى الوسط الخارجي الأعلى ملوحة، فانكمشت الخلايا وذبلت الجزرة',['خرج الماء من خلايا الجزرة إلى الوسط الخارجي الأعلى ملوحة، فانكمشت الخلايا وذبلت الجزرة','دخل الماء المالح بكميات كبيرة إلى داخل خلايا الجزرة فانفجرت','توقف الغشاء الخلوي عن العمل بسبب ملوحة الماء'],'ينتقل الماء من داخل خلايا الجزرة (الأعلى تركيزاً بالماء) إلى الماء المالح خارجه فتنكمش الخلايا.',1],
+['4- هل يُعد انتقال الماء في هذه التجربة نقلاً سلبياً أم نقلاً نشطاً؟','نقل سلبي؛ لأنه لا يحتاج إلى طاقة',['نقل سلبي؛ لأنه لا يحتاج إلى طاقة','نقل نشط؛ لأنه يستهلك طاقة الخلية','نقل نشط؛ لأنه ينقل الأملاح المعدنية'],'الخاصية الأسموزية نوع من النقل السلبي لأنها تحدث دون استهلاك طاقة.',1]
+]},
+{t:'السؤال السادس: يوضح المخطط التالي النسب المئوية لبعض مكونات خلية الإنسان:',p:2,sk:'تحليل - TIMSS',sc:'timss',i:VIS_BARS,s:[
+['1- ما المادتان اللتان تشكلان معاً ربع (25%) مكونات خلية الإنسان؟','البروتينات والدهون؛ لأن 15% + 10% = 25% (ربع مكونات الخلية)',['البروتينات والدهون؛ لأن 15% + 10% = 25% (ربع مكونات الخلية)','الأحماض النووية والكربوهيدرات (4% + 1% = 5%)','الماء والدهون (70% + 10% = 80%)'],'مجموع البروتينات (15%) والدهون (10%) يساوي 25% وهو ربع المكونات.',1],
+['2- كم تزيد نسبة الماء على نسبة البروتينات في خلية الإنسان؟','55% (لأن 70% - 15% = 55%)',['55% (لأن 70% - 15% = 55%)','85% (لأن 70% + 15% = 85%)','60% (لأن 70% - 10% = 60%)'],'نطرح نسبة البروتينات من نسبة الماء: 70% - 15% = 55%.',1]
+]},
+{t:'السؤال السابع: تحتوي بعض مياه الري على نسبة مرتفعة من الأملاح مما يسبب ذبول النباتات. اقترح إجراءين لحماية النباتات وترشيد استهلاك المياه:',p:2,sk:'تركيب - تعليم أخضر 🌱',sc:'green',s:[
+['الإجراء الأول (لحماية النباتات من الملوحة):','فحص ملوحة مياه الري ومعالجتها لتقليل الأملاح أو خلطها بمياه أقل ملوحة واختيار نباتات تتحمل الملوحة',['فحص ملوحة مياه الري ومعالجتها لتقليل الأملاح أو خلطها بمياه أقل ملوحة واختيار نباتات تتحمل الملوحة','زيادة كمية الملح المضاف إلى مياه الري يومياً','ري النباتات بمياه البحر المالحة مباشرة دون معالجة'],'فحص المياه ومعالجتها أو خلطها بمياه عذبة يحمي خلايا النبات من فقدان الماء.',1],
+['الإجراء الثاني (لترشيد استهلاك مياه الري):','استخدام الري بالتنقيط والري في الأوقات الأقل حرارة لتقليل التبخر',['استخدام الري بالتنقيط والري في الأوقات الأقل حرارة لتقليل التبخر','الري بالغمر وقت الظهيرة تحت أشعة الشمس الحارقة','ترك صنابير المياه مفتوحة طوال اليوم في المزرعة'],'الري بالتنقيط والري في الصباح الباكر أو المساء يقلل من هدر الماء بالتبخر.',1]
+]},
+{t:'السؤال الثامن: حدد ما إذا كانت كل عبارة مما يلي صحيحة (✔) أم غير صحيحة (✘):',p:8,sk:'فهم',s:[
+['1- الخلية هي أصغر وحدة بنائية ووظيفية في جسم المخلوق الحي.','صحيحة (✔)',T_TF,'الخلية هي أصغر وحدة بنائية ووظيفية.',1],
+['2- تحتوي الخلية الحيوانية على جدار خلوي وبلاستيدات خضراء.','غير صحيحة (✘)',T_TF,'الخلية النباتية فقط هي التي تحتوي على جدار خلوي وبلاستيدات خضراء.',1],
+['3- يحدث الانتشار من منطقة التركيز المنخفض إلى منطقة التركيز المرتفع.','غير صحيحة (✘)',T_TF,'يحدث الانتشار من منطقة التركيز المرتفع إلى منطقة التركيز المنخفض.',1],
+['4- الخاصية الأسموزية هي انتقال جزيئات الماء عبر الغشاء الخلوي.','صحيحة (✔)',T_TF,'الخاصية الأسموزية هي انتشار جزيئات الماء عبر الغشاء الخلوي.',1],
+['5- يحتاج النقل النشط إلى طاقة لنقل المواد عبر الغشاء.','صحيحة (✔)',T_TF,'النقل النشط يحتاج إلى طاقة لأنه ينقل المواد عكس تدرج التركيز.',1],
+['6- العضو مجموعة من الخلايا المتشابهة التي تؤدي الوظيفة نفسها.','غير صحيحة (✘)',T_TF,'النسيج هو مجموعة الخلايا المتشابهة، أما العضو فيتكون من نسيجين مختلفين أو أكثر.',1],
+['7- الميتوكندريا هي مصدر الطاقة في الخلية.','صحيحة (✔)',T_TF,'الميتوكندريا هي مركز إنتاج الطاقة في الخلية.',1],
+['8- تذبل الجزرة في الماء شديد الملوحة لأنها تفقد الماء من خلاياها.','صحيحة (✔)',T_TF,'تفقد الجزرة الماء بالخاصية الأسموزية نحو الوسط الأعلى ملوحة فتذبل.',1]
+]}
+];
+
+const io=new IntersectionObserver(es=>es.forEach(en=>{
+  if(!en.isIntersecting)return;
+  const el=en.target;io.unobserve(el);
+  if(el.classList.contains('rv'))el.classList.add('in');
+  if(el.id==='cellChart')el.querySelectorAll('.bar-fill').forEach(b=>b.style.width=b.dataset.w);
+}),{threshold:.25});
+
+let S=[],locked=false;
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const ptl=p=>p==1?'درجة':p==2?'درجتان':p+' درجات';
+
+function build(){
+  S=[];locked=false;
+  $('qs').innerHTML=Q.map((q,qi)=>`<section class="card rv"><header><b class="no">${qi+1}</b><h3>${q.t}</h3><div class="badges"><span class="sk-tag ${q.sc||''}">${q.sk}</span><span class="pt">${ptl(q.p)}</span></div></header>${q.i||''}${q.s.map(([l,a,o,e,w])=>{
+    const op=o.length===2?o.slice():shuf([a,...o.filter(v=>v!==a)]),id=S.length;
+    S.push({a,e,op,ci:op.indexOf(a),sel:-1,w:w||1});
+    return `<div class="sub">${l?`<div class="lb">${l}</div>`:''}<div class="opts${op.some(v=>v.length>26)?' long':''}" role="radiogroup" data-s="${id}">${op.map((v,i)=>`<button type="button" role="radio" aria-checked="false" class="opt" data-i="${i}"><span class="rd"></span><span>${v}</span></button>`).join('')}</div><div class="fb"><div></div></div></div>`;
+  }).join('')}</section>`).join('');
+  document.querySelectorAll('.card.rv').forEach(c=>io.observe(c));
+  const cc=$('cellChart');if(cc)io.observe(cc);
+  prog();
+}
+
+const prog=()=>{const n=S.filter(s=>s.sel>=0).length;$('cnt').textContent=`${n} / ${S.length}`;$('pg').style.width=n/S.length*100+'%'};
+let tm;const toast=m=>{const t=$('ts');t.textContent=m;t.classList.add('on');clearTimeout(tm);tm=setTimeout(()=>t.classList.remove('on'),2600)};
+
+$('qs').onclick=e=>{
+  const b=e.target.closest('.opt');if(!b||locked)return;
+  const g=b.parentNode;S[g.dataset.s].sel=+b.dataset.i;
+  [...g.children].forEach(c=>{c.classList.toggle('sel',c===b);c.setAttribute('aria-checked',c===b)});
+  g.parentNode.classList.remove('miss');prog();
+  navigator.vibrate&&navigator.vibrate(8);
+};
+
+const esc=s=>s.replace(/[<>&"']/g,c=>'&#'+c.charCodeAt(0)+';');
+$('f').onsubmit=e=>{
+  e.preventDefault();if(locked)return;
+  const nm=$('nm').value.trim(),cl=$('cl').value.trim();
+  if(!nm||!cl){
+    const el=nm?$('cl'):$('nm');el.classList.remove('err');void el.offsetWidth;el.classList.add('err');
+    el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});
+    toast('اكتب اسمك الثلاثي واختر صفّك أولاً');return;
+  }
+  const m=S.findIndex(s=>s.sel<0);
+  if(m>=0){
+    const el=document.querySelectorAll('.sub')[m];el.classList.add('miss');
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+    toast(`بقي ${S.filter(s=>s.sel<0).length} فقرة بلا إجابة`);return;
+  }
+  locked=true;let sc=0;const els=document.querySelectorAll('.sub');
+  S.forEach((s,i)=>{
+    const el=els[i],ops=el.querySelectorAll('.opt'),ok=s.sel===s.ci;
+    if(ok)sc+=s.w;
+    el.querySelector('.opts').classList.add('done');
+    ops[s.ci].classList.add('ok');if(!ok)ops[s.sel].classList.add('bad');
+    const fb=el.querySelector('.fb');
+    fb.firstChild.innerHTML=`<p class="${ok?'g':'r'}">${ok?'✔ إجابة صحيحة. ':`✘ الإجابة الصحيحة: <b>${s.a}</b>. `}${s.e||''}</p>`;
+    fb.classList.add('on');
+  });
+  sc=Math.round(sc*100)/100;
+  const pc=Math.round(sc/MAX_SCORE*100),c=pc>=75?'--ok':pc>=50?'--wn':'--no',msg=pc>=90?'ممتاز يا بطل! 🌟':pc>=75?'جيد جداً 👏':pc>=50?'جيد، راجع الأخطاء 📘':'تحتاج مراجعة، أعد المحاولة 💪';
+  const r=$('res');
+  r.innerHTML=`<div class="rw"><svg class="ring" viewBox="0 0 120 120"><circle class="rb" cx="60" cy="60" r="52" pathLength="100"/><circle class="rf" id="rf" style="--c:var(${c})" cx="60" cy="60" r="52" pathLength="100"/></svg><div class="rn" id="rn">0</div></div><h2>${msg}</h2><p>درجتك يا ${esc(nm)} (${esc(cl)}) هي <b>${sc}</b> من ${MAX_SCORE} (${pc}%)</p><p class="st" id="st"></p><button class="btn rt" id="rt" type="button">إعادة الاختبار مرة أخرى 🔄</button>`;
+  r.classList.add('show');$('sb').hidden=true;r.scrollIntoView({behavior:'smooth',block:'center'});
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    $('rf').style.strokeDashoffset=100-pc;
+    const t0=performance.now(),tk=t=>{
+      const k=Math.min(1,(t-t0)/1400);
+      $('rn').textContent=Math.round(sc*(1-Math.pow(1-k,3))*10)/10;
+      k<1&&requestAnimationFrame(tk);
+    };
+    requestAnimationFrame(tk);
+  }));
+  $('rt').onclick=()=>{r.classList.remove('show');$('sb').hidden=false;build();scrollTo({top:0,behavior:'smooth'})};
+  const st=$('st');
+  if(GOOGLE_SCRIPT_URL){
+    st.textContent='⏳ جاري حفظ النتيجة في الورقة الثانية من سجل المعلم...';
+    fetch(GOOGLE_SCRIPT_URL,{
+      method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:nm,studentClass:cl,score:sc,maxScore:MAX_SCORE,sheetIndex:2})
+    }).then(()=>st.textContent='✅ تم حفظ نتيجتك في كشف درجات الصف السادس (الورقة الثانية) بنجاح!')
+      .catch(()=>st.textContent='⚠️ تعذر الاتصال بالسجل، ولكن تم عرض نتيجتك أعلاه.');
+  }
+};
+
+const th=$('th'),ic=()=>th.textContent=document.documentElement.dataset.theme==='dark'?'☀️':'🌙';
+th.onclick=()=>{const d=document.documentElement,t=d.dataset.theme==='dark'?'light':'dark';d.dataset.theme=t;try{localStorage.setItem('th',t)}catch(e){}ic()};
+ic();build();
+</script>
+</body>
+</html>
